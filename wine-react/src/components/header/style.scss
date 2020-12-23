@@ -1,0 +1,32 @@
+@import '../global';
+.header{
+    &__row{
+        @include flex-center(space-between);
+
+    }
+    &__slogan{
+        @include font(12px);
+    }
+    &__right{
+        display:flex;
+        justify-content:flex-end;
+    }
+    &__icons{
+        .icons{
+            &__item{
+                margin-left:36px;
+                &:first-child{
+                    margin:0;
+                }
+                &:last-child{
+                    svg{
+                        fill:$white;
+                    }
+                }
+                svg{
+                    stroke:$white;
+                }
+            }
+        }
+    }
+}
