@@ -1,27 +1,14 @@
-@mixin font($size:14px,$family:'Poppins',$height:1.2, $weight:400){
-    font-family: $family;
+@mixin font($size:14px, $weight:400, $height:1, $family:'Poppins',$style:normal){
     font-size: $size;
+    font-weight: $weight;
     line-height: $height;
-    font-weight: $weight; 
-}
-@mixin flex-center($jcenter:center, $acenter:center){
-  display: flex;
-  justify-content: $jcenter;
-  align-items: $acenter;
+    font-family: $family;
+    font-style: $style;
 }
 
-// @mixin for-size($size) {
-//     @if $size == small-phone {
-//       @media (max-width: 599px) { @content; }
-//     } @else if $size == tablet-portrait-up {
-//       @media (min-width: 600px) { @content; }
-//     } @else if $size == iphone-x {
-//       @media (max-width: 420px) { @content; }
-//     } @else if $size == tablet-landscape-up {
-//       @media (min-width: 768px) { @content; }
-//     } @else if $size == desktop-up {
-//       @media (min-width: 992px) { @content; }
-//     } @else if $size == big-desktop-up {
-//       @media (min-width: 1200px) { @content; }
-//     }
-//   }
+@mixin flex-center($jcenter:center, $acenter:center){
+    display: flex;
+    justify-content: $jcenter;
+    align-items: $acenter;
+    
+}

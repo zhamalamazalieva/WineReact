@@ -1,32 +1,56 @@
 @import '../global';
 .header{
+    @include font(12px);
     &__row{
-        @include flex-center(space-between);
+        @include flex-center();
 
     }
     &__slogan{
         @include font(12px);
     }
     &__right{
-        display:flex;
-        justify-content:flex-end;
+        @include flex-center(flex-end);
     }
-    &__icons{
-        .icons{
-            &__item{
-                margin-left:36px;
-                &:first-child{
-                    margin:0;
-                }
-                &:last-child{
-                    svg{
-                        fill:$white;
-                    }
-                }
-                svg{
-                    stroke:$white;
-                }
+}
+.icons{
+    &__item{
+        margin-left:36px;
+        &:first-child{
+            margin:0;
+        }
+        &:last-child{
+            svg{
+                fill:$color-white;
             }
         }
+        svg{
+            stroke:$color-white;
+        }
+    }
+}
+.list{
+    display: flex;
+    margin-right: 35px;
+
+    &__item{
+        margin-left: 46px;
+    }
+    &__link{
+        color: $color-white;
+    }
+}
+.menu{
+    @include flex-center(space-between);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 22px 0;
+    &__link {
+      transition: 0.3s;
+      color: $color-orange;
+      @include font(16px,$font-choco);
+      border-bottom: 1px solid transparent;
+      &:hover {
+        border-bottom: 1px solid $color-orange;
+      }
     }
 }

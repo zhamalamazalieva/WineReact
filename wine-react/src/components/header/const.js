@@ -11,3 +11,4 @@ export const List = [
     link:'/wishlist'
     }
 ]
+export const NavList = ['Home', 'Vintage','Imperial','Sparkling','Accessories','Blog','Product Details','Contact'];
