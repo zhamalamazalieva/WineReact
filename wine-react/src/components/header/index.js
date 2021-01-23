@@ -8,8 +8,6 @@ import './style.scss';
 
 const Header = () => {
 
-
-
     return (
         <section className='header'>
             <div className='container'>
@@ -17,7 +15,7 @@ const Header = () => {
                     <div className='col-5 header__left'>
                         <span className='header__slogan'>We Ship Everywhere! Free In The Us!</span>
                     </div>
-                    <div className='col-2'>
+                    <div className='col-2 header__middle'>
                         <img src={LogoImg} alt='logo' />
                     </div>
                     <div className='col-5 header__right'>

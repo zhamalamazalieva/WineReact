@@ -1,0 +1,17 @@
+@import "../global";
+.btn{
+    @include font(24px, 500, 1, $font-poppins);
+    outline:none;
+    padding: 15px 48px;
+    line-height: 1;
+    border: 1px solid transparent;
+    border-radius:5px;
+  
+}
+.login-btn{
+    background-color:$color-orange;
+    color:$color-black;
+    width:60%;
+    margin:0 auto;
+    text-align:center;
+}

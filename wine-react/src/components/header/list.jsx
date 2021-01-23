@@ -6,14 +6,12 @@ import Login from './login';
 
 
 const HeaderList = () => {
-    const [activeLogin, setActiveLogin] = React.useState(false);
-    const [activeItem, setActiveItem] = React.useState();
-   
+    const [activeLogin, setActiveLogin] = React.useState(false);  
 
   return (
       <>
       {activeLogin && (
-          <Login/>
+          <Login activeLogin={activeLogin} setActiveLogin={setActiveLogin}/>
       )}
       <ul className='list header__list'>
                 {List.map((item, index) => {
