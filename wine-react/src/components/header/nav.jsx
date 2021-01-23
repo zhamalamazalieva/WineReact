@@ -8,7 +8,7 @@ const Nav = () => {
             {NavList.map((item) => {
                 return (
                     <li className='menu__item'>
-                        <Link to='/'  className='menu__link'>{item}</Link>
+                        <Link to='/'  className='menu__link'>{item}</Link>                        
                     </li>
                 )
             })}

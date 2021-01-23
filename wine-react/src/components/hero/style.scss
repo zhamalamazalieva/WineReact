@@ -1,0 +1,22 @@
+@import '../global';
+.hero{
+    &__column{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__suptitle{
+        margin:190px 0 32px;
+        @include font(16px, 400, 1, $font-choco);
+
+    }
+    &__title{
+        @include font(96px, 700, 1, $font-choco);
+        margin-bottom:24px;
+    }
+    &__description{
+        @include font(16px, 300, 1.5, $font-poppins);
+        max-width:63%;
+        text-align:center;
+    }
+}
