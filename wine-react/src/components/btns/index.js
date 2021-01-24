@@ -4,3 +4,14 @@ export const BtnLogin = () =>{
         <button className="login-btn btn">Login</button>
     )
 }
+export const BtnLearn = () => {
+    return (
+        <button className="learn-btn btn">Learn more</button>
+    )
+}
+
+export const BtnView = () => {
+    return (
+        <button className="learn-btn btn">View more</button>
+    )
+}

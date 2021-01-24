@@ -1,0 +1,95 @@
+@import "../global";
+.new {
+    background-color: $color-lightDark;
+    width: 100%;
+    &__row {
+      padding: 267px 0;
+    }
+    &__item--left {
+      padding-right: 65px;
+    }
+    &__suptitle {
+      @include font(20px, 400, 1,$font-poppins);
+      color: $color-white;
+      letter-spacing: 10px;
+    }
+    &__title {
+      @include font(74px, 400, 1,$font-choco);
+      color: $color-orange;
+      margin:47px 0 8px;
+    }
+    &__subtitle {
+      @include font(36px, 400, 1.5,$font-poppins);
+      color: $color-white;
+    }
+    &__description {
+      @include font(18px, 200, 1.8, $font-poppins);
+      color: $color-white;
+      margin: 52px 0;
+    }
+    &__buttons {
+      .new__button:first-child {
+        margin-right: 60px;
+      }
+    }
+    &__item--right{
+      position: relative;
+    }
+    &__img {
+      max-height: 650px !important;
+    }
+    &__arrows {
+      .slider__prev,
+      .slider__next {
+        position: absolute;
+        border-bottom: transparent;
+        border-left: transparent;
+        border-top: transparent;
+        border-bottom: 2px solid $color-white;
+        color: $color-white;
+        @include font(24px, 500, 1.2, $font-poppins);
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover{
+          color: $color-orange;
+          border-bottom:2px solid $color-orange
+        }
+      }
+      .slider__prev {
+        left:0;
+        transform: translateX(-50%);
+        bottom: 48%;
+      }
+      .slider__next {
+        right: -2%;
+        bottom: 48%;
+      }
+    }
+    .slick-list {
+      overflow-x: hidden;
+      width: 100%;
+    }
+    .slick-track{
+      display: flex;
+    }
+    &__slider{
+      position: absolute;
+      top: -20%;
+      left: 0;
+      width: 100%;
+        .slider__item{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    }
+    .slick-slide{
+      margin-top: 100px;
+    }
+    .slick-slider {
+      outline: none;
+      border: none;
+    
+    }
+  }
+  

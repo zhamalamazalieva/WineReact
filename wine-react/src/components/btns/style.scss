@@ -2,16 +2,21 @@
 .btn{
     @include font(24px, 500, 1, $font-poppins);
     outline:none;
-    padding: 15px 48px;
-    line-height: 1;
+    padding: 23px 48px;
     border: 1px solid transparent;
     border-radius:5px;
-  
+    text-align:center;
+
 }
 .login-btn{
     background-color:$color-orange;
     color:$color-black;
-    width:60%;
     margin:0 auto;
-    text-align:center;
+    padding:23px 65px;
+
+}
+.learn-btn{
+    background-color:$color-orange;
+    color:$color-black;
+    margin-right:35px;
 }
