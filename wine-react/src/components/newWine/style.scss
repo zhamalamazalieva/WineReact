@@ -47,6 +47,7 @@
         border-top: transparent;
         border-bottom: 2px solid $color-white;
         color: $color-white;
+        outline:none;
         @include font(24px, 500, 1.2, $font-poppins);
         cursor: pointer;
         transition: 0.3s;

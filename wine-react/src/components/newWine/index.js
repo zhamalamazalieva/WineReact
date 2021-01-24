@@ -10,6 +10,13 @@ import {BtnLearn, BtnView} from "../../components/btns";
 import {newWines, wineImg} from './const';
 const NewWine = () => {
     SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+    const params = {
+        slidesPerView:1,
+        navigation:{
+            prevEl: '.slider__prev',
+            nextEl: '.slider__next',
+        },    
+    }
     return (
         <section className="new" id="new">
             <div className="container">
@@ -44,16 +51,7 @@ const NewWine = () => {
                                 </svg>
                                 <div className="new__slider">
 
-                                <Swiper
-                               
-                                    slidesPerView={1}
-                                    navigation={{
-                                        prevEl: '.slider__prev',
-                                        nextEl: '.slider__next',
-                                    }}
-                                
-                                    onSlideChange={() => console.log('slide change')}
-                                    onSwiper={(swiper) => console.log(swiper)}
+                                <Swiper {...params}                             
                                     >
                                      {wineImg.map(item => {
                                         return(

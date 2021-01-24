@@ -1,6 +1,7 @@
 import Header from './components/header';
 import Hero from './components/hero';
 import NewWine from './components/newWine';
+import Sort from './components/sort';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <NewWine/>
+      <Sort/>
     </div>
   );
 }

@@ -65,3 +65,10 @@
   .btn {
     cursor: pointer;
   }
+  .orange{
+    color:$color-orange;
+  }
+  .section__title{
+    @include font(48px, 500, 1.5, $font-choco);
+    text-align:center;
+  }

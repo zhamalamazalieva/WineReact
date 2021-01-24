@@ -1,0 +1,60 @@
+@import "../global";
+.sort{
+    &__row{
+        width: 100% !important;
+    }
+   
+    &__item{
+        position: relative !important;
+        display: flex;
+        flex-direction: column  !important;
+        align-items: center !important;
+        margin:0 0 95px 0;
+        justify-content: flex-end !important;
+    }
+    &__img{
+        margin-bottom:15px;
+        max-height: 360px;
+
+    }
+    &__discount{
+        @include font(14px, 400, 1.5, $font-poppins);
+        color:$color-black;
+        display: inline-block !important;
+        background-color: $color-orange;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 80px;
+        height: 40px;
+        display:flex  !important;
+        justify-content: center !important;
+        align-items: center !important;
+
+    }
+    &__row{
+        padding-top: 90px;
+    }
+    &__column{
+        justify-content: flex-start !important;
+    }
+    &__product-name{
+        @include font(24px, 400, 1.2, $font-choco);
+        color: $color-white;
+        justify-self: left;
+    }
+    &__old-price{
+        @include font(16px, 300, 1.2, $font-poppins);
+        color: $color-orange;
+        text-decoration: line-through;
+        margin-right: 5px;
+    }
+    &__new-price{
+        @include font(24px, 400, 1.2, $font-poppins);
+        color: $color-orange;
+    }
+    &__link{
+        margin-bottom: 170px;
+    }
+   
+}
