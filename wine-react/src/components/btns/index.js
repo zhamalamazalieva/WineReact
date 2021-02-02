@@ -4,6 +4,11 @@ export const BtnLogin = () =>{
         <button className="login-btn btn">Login</button>
     )
 }
+export const BtnRegister = () =>{
+    return (
+        <button className="login-btn btn">Register</button>
+    )
+}
 export const BtnLearn = () => {
     return (
         <button className="learn-btn btn">Learn more</button>

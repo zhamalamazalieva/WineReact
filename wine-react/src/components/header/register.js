@@ -1,39 +1,43 @@
 import React from "react";
 import userAvatar from '../../assets/img/svg/user.svg';
-import {BtnLogin}  from '../btns';
+import {BtnRegister}  from '../btns';
 
 
-const Login = ({setActiveLogin, activeLogin}) => {
+const Register = ({setActiveRegister, activeRegister}) => {
   const ModalRef = React.useRef();
   const ModalWrapperRef = React.useRef();
   const handleClickOutSide = (event) => {
     if(!event.path.includes(ModalRef.current)){
-      setActiveLogin(false)
+      setActiveRegister(false)
     }
   }
   React.useEffect(() => {
     if (ModalWrapperRef.current) {
       ModalWrapperRef.current.addEventListener("click", handleClickOutSide);
     }
-  }, [activeLogin]);
+  }, [activeRegister]);
   return (
     <div ref={ModalWrapperRef} className="login__wrapper">
       <div ref={ModalRef} className="login">
-        <h2 className="login__title">Login</h2>
+        <h2 className="login__title">Register</h2>
         <form action="" className="login__form">
           <div className="login__img-container">
                 <img src={userAvatar} alt="avatar" />
           </div>
           <div className="login__container">
-            <label for="username" className="login__label">             
-              <input type="text" className="login__input" placeholder="Username"/>
-               <span>Username</span>
+            <label for="username" className="login__label">
+              <span>First Name</span>
+              <input type="text" className="login__input" />
             </label>
-            <label for="password" className="login__label">             
-              <input type="password" className="login__input" placeholder="Password" />
-               <span>Password</span>
+             <label for="usersurname" className="login__label">
+              <span>Surname</span>
+              <input type="text" className="login__input" />
             </label>
-            <BtnLogin/>
+            <label for="password" className="login__label">
+              <span>Password</span>
+              <input type="password" className="login__input" />
+            </label>
+            <BtnRegister/>
           </div>
         </form>
       </div>
@@ -41,4 +45,4 @@ const Login = ({setActiveLogin, activeLogin}) => {
   );
 };
 
-export default Login;
+export default Register;

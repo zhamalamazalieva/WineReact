@@ -29,18 +29,24 @@
         }
         svg{
             stroke:$color-white;
+            transition:0.3;
+            &:hover{
+              stroke:$color-orange;
+            }
         }
     }
 }
 .list{
     display: flex;
     margin-right: 35px;
-
     &__item{
         margin-left: 46px;
+        cursor:pointer;
+
     }
     &__link{
         color: $color-white;
+     
     }
 }
 .menu{
@@ -58,7 +64,7 @@
       }
     }
 }
- .login {
+.login {
       background-color:$color-black;
       width:30%;
       position: fixed;
@@ -73,10 +79,10 @@
         top:0;
         width:100%;
         background-color:red;
-           height: 100vh;
-            width: 100vw;
-            background-color: rgba(0, 0, 0, 0.8);
-            z-index: 5;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 5;
       }
       &__title{
         @include font(28px,600, 1, $font-choco);
@@ -106,9 +112,9 @@
           display: flex;
           flex-direction: column;
           position: relative;
-          margin-bottom: 30px;      
+          margin-bottom: 30px; 
           span {
-            @include font(16px, 400, 1, $font-poppins);
+            @include font(14px, 400, 1, $font-poppins);
             line-height: 1.5;
             color: $color-white;
             position: absolute;
@@ -116,6 +122,7 @@
             left: 12px;
             padding: 0 10px;
             background-color: $color-black;
+            opacity:0;     
           }
           input {
             width: 100%;
@@ -128,6 +135,14 @@
             color: $color-white;
             font-size: 14px;
             border-radius:5px;
+            &:focus + span{
+                   opacity: 1;
+                   padding-top: 0;
+                   &::placeholder{
+                     display:none;
+                   }
+
+            }
           }
         }
         &__button {

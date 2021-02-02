@@ -13,7 +13,6 @@ const Reviews = () => {
         slidesPerView:1,
         pagination:{ 
             clickable: false }
-  
     }
     return (
         <section className="review" id="review">

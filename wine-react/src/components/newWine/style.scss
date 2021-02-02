@@ -66,31 +66,10 @@
         bottom: 48%;
       }
     }
-    .slick-list {
-      overflow-x: hidden;
-      width: 100%;
-    }
-    .slick-track{
-      display: flex;
-    }
-    &__slider{
-      position: absolute;
-      top: -20%;
-      left: 0;
-      width: 100%;
-        .slider__item{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-    }
-    .slick-slide{
-      margin-top: 100px;
-    }
-    .slick-slider {
-      outline: none;
-      border: none;
-    
-    }
-  }
   
+  .swiper-pagination-bullet{
+    background-color:red;
+    width:15px;
+    height:15px;    
+  }}
+

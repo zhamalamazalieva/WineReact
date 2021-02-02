@@ -6,17 +6,26 @@
     border: 1px solid transparent;
     border-radius:5px;
     text-align:center;
-
+    transition:0.4s;
 }
 .login-btn{
     background-color:$color-orange;
     color:$color-black;
     margin:0 auto;
-    padding:23px 65px;
-
+    padding:15px 65px;
+    &:hover{
+        background-color:transparent;
+        color:$color-orange;
+        border: 1px solid $color-orange;
+    }
 }
 .learn-btn{
     background-color:$color-orange;
     color:$color-black;
     margin-right:35px;
+    &:hover{
+        background-color:transparent;
+        color:$color-orange;
+        border: 1px solid $color-orange;
+    }
 }
