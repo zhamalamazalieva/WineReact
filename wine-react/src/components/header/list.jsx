@@ -9,8 +9,6 @@ import Register from './register';
 const HeaderList = () => {
     const [activeLogin, setActiveLogin] = React.useState(false);  
     const [activeRegister, setActiveRegister] = React.useState(false);  
-
-    // const handleClickActive = (index) => setActiveItem(index)
   return (
       <>
       {activeLogin && (

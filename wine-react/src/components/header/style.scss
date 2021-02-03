@@ -1,5 +1,7 @@
 @import '../global';
+@import "./search/style.scss";
 .header{
+
     @include font(12px);
     &__row{
         @include flex-center();
@@ -11,6 +13,8 @@
     }
     &__right{
         @include flex-center(flex-end);
+        position:relative;
+
     }
     &__middle{
       @include flex-center();
@@ -36,6 +40,7 @@
         }
     }
 }
+
 .list{
     display: flex;
     margin-right: 35px;
@@ -93,17 +98,98 @@
         text-align:center;
         letter-spacing:2px;
       }
-        &__img-container {
+      &__img-container {
           text-align: center;
           margin:50px 0;
           img {
             width: 35%;
           }
-        }
-        &__row {
+      }
+      &__row {
           justify-content: space-between;
           align-items: center;
+      }
+        &__container {
+          display: flex;
+          flex-direction: column;
         }
+        &__label {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          margin-bottom: 30px; 
+          span {
+            @include font(14px, 400, 1, $font-poppins);
+            line-height: 1.5;
+            color: $color-white;
+            position: absolute;
+            top: -25%;
+            left: 12px;
+            padding: 0 10px;
+            background-color: $color-black;
+            opacity:0;     
+          }
+          input {
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            padding: 12px 20px;
+            border: 1px solid $color-white;
+            background-color: transparent;
+            outline: none;
+            color: $color-white;
+            font-size: 14px;
+            border-radius:5px;
+            &:focus + span{
+                   opacity: 1;
+                   padding-top: 0;
+            }
+          }
+        }
+        &__button {
+          width: 100%;
+        }
+}
+.login {
+      background-color:$color-black;
+      width:30%;
+      position: fixed;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%);
+      padding:25px;
+      box-shadow:0px 0px 15px 2px rgba(255,255,255, .6);
+      &__wrapper{
+        position:fixed;
+        left:0;
+        top:0;
+        width:100%;
+        background-color:red;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 5;
+      }
+      &__title{
+        @include font(28px,600, 1, $font-choco);
+        color:$color-orange;
+        padding:15px 0;
+        border-top:1px solid rgba(255,255,255, .6);
+        border-bottom:1px solid rgba(255,255,255, .6);
+        text-align:center;
+        letter-spacing:2px;
+      }
+      &__img-container {
+          text-align: center;
+          margin:50px 0;
+          img {
+            width: 35%;
+          }
+      }
+      &__row {
+          justify-content: space-between;
+          align-items: center;
+      }
         &__container {
           display: flex;
           flex-direction: column;
@@ -161,4 +247,4 @@
             color: $color-white;
           }
         }
-      }
+}
