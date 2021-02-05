@@ -1,0 +1,114 @@
+@import "../global";
+.offer {
+  &__title {
+    margin: 150px 0 135px;
+  }
+  &__row {
+    min-width: 0;
+  }
+  &__item {
+    position: relative;
+    margin: 0 10px;
+    width: 100%;
+  }
+
+  &__info {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: $color-white;
+    bottom: 0;
+    left: 6%;
+    min-width: 0;
+  }
+  &__opacity{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    background-color:$color-black;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+  }
+  &__name {
+    @include font(24px, 400,1.5, $font-choco);
+    line-height: 1.5;
+  }
+  &__price {
+    @include font(36px, 700, 1.5, $font-choco);
+    line-height: 54px;
+  }
+ 
+  .slick-slider {
+    position: relative;
+    outline: none;
+    border: none;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      height: 100%;
+      width: 50px;
+      background-color: black;
+      z-index: 2;
+    }
+    &::after {
+      left: 0;
+    }}
+  
+  .slick-track {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slick-slide {
+    transition: all 0.5s ease;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+
+    &.slick-current,
+    &.slick-center {
+    
+      .offer__item {
+        .offer__opacity{
+          opacity: 0;
+        }
+      
+      }
+    }
+    img {
+      transition: 0.5s;
+    }
+  }
+
+  .slick-list {
+    overflow: hidden;
+  }
+  .slick-dots {
+    padding-top: 80px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .slick-dots li {
+    list-style-type: none;
+    margin: 10px;
+  }
+  .slick-dots li button {
+    outline: none;
+    border: transparent;
+    font-size: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $color-white;
+  }
+  .slick-dots .slick-active button {
+    background-color: $color-orange;
+  }
+
+}
