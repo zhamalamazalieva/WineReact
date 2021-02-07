@@ -1,4 +1,4 @@
-import img1 from '../../assets/img/png/Rectangle 17.png';
+import img1 from '../../assets/img/png/Rectangle 18.png';
 import img2 from '../../assets/img/png/Rectangle 18.png';
 
 
