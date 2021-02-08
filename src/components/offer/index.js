@@ -14,6 +14,7 @@ const Offer = () => {
      SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
     const params = {
         slidesPerView:3,
+        // centeredSlides:true,
         pagination:{ 
             clickable: false,
         }
@@ -25,15 +26,17 @@ const Offer = () => {
             <Swiper {...params} className="offer__slider offer__row row offer__margin">
                 {OfferData.map(item => {
                     return(
+                        
                         <SwiperSlide className="col-4">
-                                      <div className="offer__item">
+                        {({isCenter}) => (
+                                      <div className={`offer__item ${isCenter ? 'active' : ''}`}>
                         <img src={item.img} alt="" className="offer__wine"/>
                             <div class="offer__info">
                                 <span className="offer__name">{item.name}</span>
                                 <span className="offer__price">${item.price}</span>
                             </div>
                             <div className="offer__opacity"></div>                        
-                    </div>
+                    </div>)}
                          </SwiperSlide>
                     )
                 })}               

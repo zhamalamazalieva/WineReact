@@ -1,5 +1,5 @@
 @import "../global";
-.new {
+.new{
     background-color: $color-lightDark;
     width: 100%;
     &__row {
@@ -35,16 +35,19 @@
     &__item--right{
       position: relative;
     }
-    &__img {
-      max-height: 650px !important;
+    &__slideritem{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%);
     }
+    // &__img {
+    //   max-height: 650px !important;
+    // }
     &__arrows {
       .slider__prev,
       .slider__next {
         position: absolute;
-        border-bottom: transparent;
-        border-left: transparent;
-        border-top: transparent;
         border-bottom: 2px solid $color-white;
         color: $color-white;
         outline:none;

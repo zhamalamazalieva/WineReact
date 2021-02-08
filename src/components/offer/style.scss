@@ -19,17 +19,16 @@
     bottom: 0;
     left: 6%;
   }
-  // &__opacity{
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 8;
-  //   background-color:$color-black;
-  //   opacity: .7;
-  //   width: 100%;
-  //   height: 100%;
-  //   transition: 0.3s;
-  // }
+  .active{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 8;
+    background-color:red;
+    opacity: .7;
+
+    transition: 0.3s;
+  }
   &__name {
     @include font(24px, 400,1.5, $font-choco);
     line-height: 1.5;
@@ -42,5 +41,18 @@
     width:100%;
     height:100%;
   }
+  .swiper-wrapper{
+    height:750px;
+  }
+  .swiper-pagination-bullet{
+    background-color:$color-white;
+    opacity:0.7;
+    width:15px;
+    height:15px;
+    margin:0 15px !important;
 
+  }
+  .swiper-pagination-bullet-active{
+    background-color: $color-orange;
+  }
 }

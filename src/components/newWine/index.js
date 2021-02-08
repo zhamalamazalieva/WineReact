@@ -56,16 +56,14 @@ const NewWine = () => {
                                      {wineImg.map(item => {
                                         return(
                                             <SwiperSlide >
-                                            <div className="slider__item">
+                                            <div className="new__slideritem">
                                                  <img src={item.img1} alt="" className="new__img"/>
                                             </div>
                                             </SwiperSlide>
                                    
                                         )
                                     })}
-                                </Swiper>
-
-                                   
+                                </Swiper>                                   
                                 </div>
                                 <div className="new__arrows">
                                     <span className="slider__prev">Prev</span>
