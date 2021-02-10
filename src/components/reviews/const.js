@@ -1,5 +1,5 @@
 import Img1 from '../../assets/img/png/review-avatar3.jpg';
-import Img2 from '../../assets/img/png/review-avatar2.png';
+import Img2 from '../../assets/img/jpg/review-avatar3.jpg';
 
  export const ReviewData = [
     {

@@ -1,0 +1,47 @@
+@import "../global";
+.events {
+  padding:255px 0 150px;
+  &__title {
+    margin-bottom: 60px;
+  }
+  &__row{
+    display:flex;
+  }
+  
+  &__img{
+    min-width: 100%;
+    max-width:100%;
+    height:100%;
+    object-fit:cover;
+
+  }
+  &__link {
+    padding: 8px 0;
+    width: 122px;
+  }
+  &__name {
+    @include font(24px,400,1.2,$font-poppins);
+    padding: 60px 0 8px;
+  }
+  &__date, &__text {
+    @include font(18px,400, 1.5, $font-poppins);
+  }
+  &__text {
+    width: 65%;
+    margin: 45px 0;
+  }
+  &__item--right {
+    padding-left: 30px;
+    background-color: $color-lightdark;
+    height: 100%;
+  }
+  &__item--left{
+    height:410px;
+  }
+  .swiper-buttons{
+    position:absolute;
+  }
+  .swiper-button-prev{
+  }
+  
+}

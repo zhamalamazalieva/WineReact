@@ -4,6 +4,9 @@ import NewWine from './components/newWine';
 import Sort from './components/sort';
 import Reviews from './components/reviews';
 import Offer from './components/offer';
+import Events from './components/events';
+
+
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
       <Sort/>
       <Reviews/>
       <Offer />
+      <Events />
     </div>
   );
 }
